@@ -1,1 +1,84 @@
-w
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Вокзал</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">Вокзал</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">                
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                </li>                
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <h4>Добавление нового маршута</h4>
+        <form>
+            <div class="form-group">
+                <label for="routeName">Название</label>
+                <input type="text" class="form-control" id="routeName" />
+            </div>
+            <div class="form-group">
+                <label for="routeFrom">Начальная станция</label>
+                <input type="text" class="form-control" id="routeFrom" />
+            </div>
+            <div class="form-group">
+                <label for="routeTo">Конечная станция</label>
+                <input type="text" class="form-control" id="routeTo" />
+            </div>
+            <div class="form-group">
+                <label for="routeStart">Дата отправления</label>
+                <input type="datetime-local" class="form-control" id="routeStart" />
+            </div>
+            <div class="form-group">
+                <label for="routeEnd">Дата прибытия</label>
+                <input type="datetime-local" class="form-control" id="routeEnd" />
+            </div>
+            <div class="form-group">
+                <label for="trainNumber">Номер поезда</label>
+                <input type="text" class="form-control" id="trainNumber" />
+            </div>
+            <div class="form-group">
+                <label for="routeType">Тип маршута</label>
+                <select class="custom-select" id="routeType">
+                    <option>Региональные линии экономкласса</option>
+                    <option>Межрегиональные линии экономкласса</option>
+                    <option>Межрегиональные линии бизнес-класса</option>
+                </select>    
+            </div>
+            <div class="form-group">
+                <label for="cruisingMode">Режим курсирования</label>
+                <input type="text" class="form-control" id="cruisingMode">
+            </div>
+            <div class="form-group">
+                <label for="routeStations">Станции</label>
+                <textarea class="form-control" id="routeStations"></textarea>
+            </div>
+        </form>
+    </div>
+    <footer>
+        <div class="copyrights">
+            <p class="text-center">&copy; 2021 - Морза Вячеслав ПО-21</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -12,7 +12,7 @@
 
 <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Вокзал</a>
+        <a class="navbar-brand" href="index.html">Вокзал</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -45,19 +45,47 @@
             </div>
             <div class="form-group">
                 <label for="trainCountPass">Количество пассажирских мест</label>
-                <input type="range" class="form-control-range" id="trainCountPass" />
+                <div class="row">
+                    <div class="col-md-11">
+                        <input type="range" min="0" max="1000" value="0" class="form-control-range" id="trainCountPass" />
+                    </div>
+                    <div class="col-md">
+                        <div id="countPass">0</div>
+                    </div>                    
+                </div>
             </div>
             <div class="form-group">
                 <label for="trainCountCarriage">Количество вагонов</label>
-                <input type="range" class="form-control-range" id="trainCountCarriage" />
+                <div class="row">
+                    <div class="col-md-11">
+                        <input type="range" min="0" value="0" class="form-control-range" id="trainCountCarriage" />
+                    </div>
+                    <div class="col-md">
+                        <div id="countCarriage">0</div>
+                    </div>
+                </div>
+                
             </div>
             <div class="form-group">
-                <label for="trainCarrigeTypes">Типы вагонов</label>
-                <select multiple class="form-control" id="trainCarrigeTypes">
-                    <option>Вагон-купе</option>
-                    <option>Вагон-плацкарт</option>
-                    <option>Вагон-пассажирский</option>                    
-                </select>
+                <label>Типы вагонов</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="trainCarrigeType1">
+                    <label class="form-check-label">
+                      Вагон-купе
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="trainCarrigeType2">
+                    <label class="form-check-label">
+                      Вагон-плацкарт
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="trainCarrigeType3">
+                    <label class="form-check-label">
+                      Вагон-пассажирский
+                    </label>
+                </div>
             </div>
             <input type="submit" class="btn btn-dark" value="Отправить" />
         </form>
@@ -67,6 +95,16 @@
             <p class="text-center">&copy; 2021 - Морза Вячеслав ПО-21</p>
         </div>
     </footer>
+
+    <script>
+        $('#trainCountPass').change(() =>{
+            $('#countPass').html($('#trainCountPass').val());
+        });
+
+        $('#trainCountCarriage').change(() => {
+            $('#countCarriage').html($('#trainCountCarriage').val());
+        });
+    </script>
 
 </body>
 
